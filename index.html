@@ -32,6 +32,44 @@
 
  	
  <script>
+	 
+function authenticate(){
+	
+
+	
+	console.log("inside");
+	
+	window.lpGetAuthenticationToken = function(callback) {
+		console.log("inside lpGetAuthenticationToken!");
+		var token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDQ5MTc3NzcsInN1YiI6IjUxZWUxOWJjLTQ3ZDUtNDUwNi1hMzAwLWIwNTE3MmIzYWNmMiIsImlzcyI6Imh0dHBzOi8vd3d3LmJ1ZGR5YmFuay5jb20vIiwibHBfc2RlcyI6W3sidHlwZSI6ImN0bXJpbmZvIiwiaW5mbyI6eyJjdHlwZSI6ImxvdmUifX1dLCJpYXQiOjE2MTMzODE3Nzd9.CZDPPBk2diwH9ELpFPS42IrZscJ0gRsqg84wuODLsZpDC2Lyph6KeAuuKuH7Z1XmT645Tq6_bUO4tE-8A0Hiab3rAemMr3eO4uLSyB1SNQ4cR9x9zlcXeWHPI-h-PQA8lzyeaxsvTjTny5U9Q2hcRwPrmGoEEY3aryDPg-oiJsHoG3IfWTggABWGiXAVVqBTM360YioFBYGvqdM_w2KWgYfsOeOVyiHZpkqj31KKr44Z_S3-1spPm9WttC-UXb6UHtHxDkgtTDuqxDemSoQ64Sn0PxGttx0MQqQIw9WPz-5kcOifwgEcJnQRqWNi3_x-j6z__YSRaNNhy7nTzdD4Dw";
+		callback(token);
+	};
+	
+
+
+
+	
+	setTimeout(function(){
+		console.log("inside2");
+		lpTag.sdes.push({
+			"type": "ctmrinfo",
+			"info": {
+				customerId: '1'
+			}
+		});
+	 
+		
+	}, 3000);
+	
+}
+	 
+	 
+$(document).ready(function() {
+	authenticate();
+});
+	 
+	 
+	 
 	
  
   </script>
